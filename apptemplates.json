@@ -5,7 +5,7 @@
         "description": "Proxy service using Traefik",
         "note": "Traefik",
         "categories": [
-            "infrastructure"
+            "Infrastructure"
         ],
         "platform": "linux",
         "logo": "https://portal-dev.devcloud.pepperdash.com/__pdapps-static/traefik.svg",
