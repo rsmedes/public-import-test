@@ -1,0 +1,17 @@
+[
+    {
+        "type": 2,
+        "title": "Traefik Proxy",
+        "description": "Proxy service using Traefik",
+        "note": "Traefik",
+        "categories": [
+            "infrastructure"
+        ],
+        "platform": "linux",
+        "logo": "https://portal-dev.devcloud.pepperdash.com/__pdapps-static/traefik.svg",
+        "repository": {
+            "url": "https://bitbucket.org/Pepperdash_Products/pd-apps-compose/",
+            "stackfile": "traefik-docker-compose.yml"
+        }
+    }
+]
