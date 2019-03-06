@@ -10,7 +10,18 @@ services:
       - ConnectionStrings__PostgreSqlProvider=Host=postgres;Database=PepperDash.Connect.AuthServer.PostgreSql.Dev;Username=postgres;Password=P3pp3rD4sh!;
     ports:
       - "5001:80"
-    
+    labels:
+      - "traefik.frontend.rule=PathPrefixStrip:/auth"
+      - "traefik.backend=auth"
+      - "traefik.port=5001"
+      - "traefik.enable=true"
+      - "traefik.passHostHeader=true"
+      - "traefik.docker.network=pdt_fog_network"
+      - "traefik.frontend.entryPoints=http"
+      - "traefik.frontend.redirect.regex=^(.*)/auth$$"
+      - "traefik.frontend.redirect.replacement=$$1/auth/"
+      - "traefik.frontend.rule=PathPrefix:/auth;ReplacePathRegex: ^/auth/(.*) /$$1"
+
   postgres:
     image: postgres:9.6
     ports:
