@@ -10,7 +10,7 @@ services:
       - ConnectionStrings__PostgreSqlProvider=Host=postgres;Database=PepperDash.Connect.AuthServer.PostgreSql.Dev;Username=postgres;Password=P3pp3rD4sh!;
     ports:
       - "5001:80"
-    restart: always
+    
   postgres:
     image: postgres:9.6
     ports:
@@ -19,7 +19,7 @@ services:
       POSTGRES_USER: 'postgres'
       POSTGRES_PASSWORD: 'P3pp3rD4sh!'
       POSTGRES_DB: 'PepperDash.Connect.AuthServer.PostgreSql'
-    restart: always
+    
 
 networks:
  default:
