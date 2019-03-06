@@ -21,11 +21,7 @@ services:
 
   portainer:
     image: portainer/portainer:latest
-    command: 
-     - -H tcp://tasks.portainer_agent:9001 
-     - --tlsskipverify 
-     - --templates https://portal-dev.devcloud.pepperdash.com/__pdapps-static/apptemplates.json
-     - --logo https://portal-dev.devcloud.pepperdash.com/__pdapps-static/PD-Fog-Logo.png
+    command:  -H tcp://tasks.portainer_agent:9001 --tlsskipverify --templates https://portal-dev.devcloud.pepperdash.com/__pdapps-static/apptemplates.json --logo https://portal-dev.devcloud.pepperdash.com/__pdapps-static/PD-Fog-Logo.png
     ports:
       - "9000:9000"
     volumes:
