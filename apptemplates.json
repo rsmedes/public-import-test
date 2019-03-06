@@ -13,5 +13,20 @@
             "url": "https://bitbucket.org/Pepperdash_Products/pd-apps-compose/",
             "stackfile": "traefik-docker-compose.yml"
         }
+    },
+    {
+        "type": 2,
+        "title": "PDT Auth Server",
+        "description": "Auth server for control systems",
+        "note": "Auth server used by control systems for other PDT apps.",
+        "categories": [
+            "PD Apps"
+        ],
+        "platform": "linux",
+        "logo": "",
+        "repository": {
+            "url": "https://bitbucket.org/Pepperdash_Products/pd-apps-compose/",
+            "stackfile": "authserver-docker-compose.yml"
+        }
     }
 ]
