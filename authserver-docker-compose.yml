@@ -13,7 +13,7 @@ services:
     labels:
       - "traefik.frontend.rule=PathPrefixStrip:/auth"
       - "traefik.backend=auth"
-      - "traefik.port=5001"
+      - "traefik.port=80"
       - "traefik.enable=true"
       - "traefik.passHostHeader=true"
       - "traefik.docker.network=pdt_fog_network"
