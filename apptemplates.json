@@ -25,7 +25,7 @@
         "platform": "linux",
         "logo": "",
         "repository": {
-            "url": "https://bitbucket.org/Pepperdash_Products/pd-apps-compose/",
+            "url": "https://portal-dev.devcloud.pepperdash.com/__pdapps-static/",
             "stackfile": "authserver-docker-stack.yml"
         }
     },
