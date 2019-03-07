@@ -16,7 +16,7 @@
     },
     {
         "type": 2,
-        "title": "PDT Auth Server",
+        "title": "Auth Server",
         "description": "Auth server for control systems",
         "note": "Auth server used by control systems for other PDT apps.",
         "categories": [
@@ -27,6 +27,51 @@
         "repository": {
             "url": "https://bitbucket.org/Pepperdash_Products/pd-apps-compose/",
             "stackfile": "authserver-docker-compose.yml"
+        }
+    },
+    {
+        "type": 2,
+        "title": "ADS",
+        "description": "Active Directory Search",
+        "note": "Active Directory search server.",
+        "categories": [
+            "PD Apps"
+        ],
+        "platform": "linux",
+        "logo": "",
+        "repository": {
+            "url": "https://bitbucket.org/Pepperdash_Products/pd-apps-compose/",
+            "stackfile": "ads-docker-compose.yml"
+        }
+    },
+    {
+        "type": 2,
+        "title": "FDS",
+        "description": "Flexible Data Store",
+        "note": "Flexible Data Store for control systems.",
+        "categories": [
+            "PD Apps"
+        ],
+        "platform": "linux",
+        "logo": "",
+        "repository": {
+            "url": "https://bitbucket.org/Pepperdash_Products/pd-apps-compose/",
+            "stackfile": "fds-docker-compose.yml"
+        }
+    },
+    {
+        "type": 2,
+        "title": "Mobile Control",
+        "description": "Mobile Control",
+        "note": "Mobile Control server.",
+        "categories": [
+            "PD Apps"
+        ],
+        "platform": "linux",
+        "logo": "",
+        "repository": {
+            "url": "https://bitbucket.org/Pepperdash_Products/pd-apps-compose/",
+            "stackfile": "mc-docker-compose.yml"
         }
     }
 ]
