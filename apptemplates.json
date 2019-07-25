@@ -73,7 +73,7 @@
             "url": "https://bitbucket.org/Pepperdash_Products/pd-apps-compose/",
             "stackfile": "mc-docker-stack.yml"
         }
-    }
+    },
     {
         "type": 2,
         "title": "EFS",
