@@ -1,6 +1,6 @@
 version: '3.7'
 services:
-  efs_cron:
+  cron:
     image: pepperdash/pepperdash.serverapps.efs:latest
     secrets:
     - efs-s3_access
@@ -16,7 +16,7 @@ services:
       mode: replicated
       replicas: 1
   
-  efs_server:
+  webserver:
     image: nginx:stable
     volumes:
       - type: volume
