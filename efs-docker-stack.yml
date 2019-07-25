@@ -1,0 +1,56 @@
+version: '3.7'
+services:
+  efs_cron:
+    image: pepperdash/pepperdash.serverapps.efs:latest
+    secrets:
+    - efs-s3_access
+    - efs-s3_secret
+    volumes:
+    - type: volume
+      source: efs-file-share
+      target: /usr/share/efs
+    configs:
+    - source: efs-s3cfg
+      target: /tmp/.s3cfg
+    deploy:
+      mode: replicated
+      replicas: 1
+  
+  efs_server:
+    image: nginx:stable
+    volumes:
+      - type: volume
+        source: efs-file-share
+        target: /usr/share/nginx/html
+    deploy:
+      mode: replicated
+      replicas: 1
+      labels:
+        - "traefik.frontend.rule=PathPrefixStrip:/efs"
+        - "traefik.backend=efs"
+        - "traefik.port=80"
+        - "traefik.enable=true"
+        - "traefik.passHostHeader=true"
+        - "traefik.docker.network=pdt_fog_network"
+        - "traefik.frontend.redirect.regex=^(.*)/efs$$"
+        - "traefik.frontend.redirect.replacement=$$1/efs/"
+        - "traefik.frontend.rule=PathPrefix:/efs;ReplacePathRegex: ^/efs/(.*) /$$1"
+
+volumes:
+  efs-file-share:
+    external: true
+
+secrets:
+  efs-s3_access:
+    external: true
+  efs-s3_secret:
+    external: true
+
+configs:
+  efs-s3cfg:
+    external: true
+    
+networks:
+ default:
+  external:
+   name: pdt_fog_network

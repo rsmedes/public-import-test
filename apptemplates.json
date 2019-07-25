@@ -74,4 +74,19 @@
             "stackfile": "mc-docker-stack.yml"
         }
     }
+    {
+        "type": 2,
+        "title": "EFS",
+        "description": "Edge File Services",
+        "note": "Syncs local folder with an S3 bucket",
+        "categories": [
+            "PD Apps"
+        ],
+        "platform": "linux",
+        "logo": "",
+        "repository": {
+            "url": "https://bitbucket.org/Pepperdash_Products/pd-apps-compose/",
+            "stackfile": "efs-docker-stack.yml"
+        }
+    }
 ]
