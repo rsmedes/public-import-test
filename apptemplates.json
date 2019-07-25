@@ -78,7 +78,7 @@
         "type": 2,
         "title": "EFS",
         "description": "Edge File Services",
-        "note": "Syncs local folder with an S3 bucket",
+        "note": "Syncs local folder with an S3 bucket.\nRequires external config file 'efs-s3cfg' and two external secrets, 'efs-s3_access' and 'efs-s3_secret'.",
         "categories": [
             "PD Apps"
         ],
